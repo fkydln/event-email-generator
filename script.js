@@ -3,6 +3,7 @@ function submitForm() {
   let eventDate = $("#eventDate").val();
   let source = $("input[name='source']:checked").val();
   let destination = "";
+  let routing = "";
   let eventTier = $("#eventTier").val();
   let theSwitch = $("#theSwitch");
   let captionMax = $("#captionMax");
@@ -13,6 +14,14 @@ function submitForm() {
     destination = "FBMOTR02";
   } else {
     destination = "FBMOTR04";
+  }
+
+  if (destination == "FBMOTR02") {
+    routing =
+      "<br>Route Program from FB Motor 02 to EEG 1 and 2  EEG 1 to CC1, CC3, CC5  EEG 2 to CC2, CC4, CC6";
+  } else {
+    routing =
+      "<br>Route Program from FB Motor 04 to EEG 3 and 4  EEG 3 to CC7, CC9, CC11  EEG 4 to CC8, CC10, CC12";
   }
 
   let theSwitchTemplate =
@@ -30,7 +39,11 @@ function submitForm() {
     source +
     "<br>Destination:" +
     destination +
-    " <br>Notes:  From FBMOTR02/FBMOTR04  I will need this routed via the standard routing below.<br>Route Program from FB Motor 02 to EEG 1 and 2  EEG 1 to CC1, CC3, CC5  EEG 2 to CC2, CC4, CC6  *****OR*****  Route Program from FB Motor 04 to EEG 3 and 4  EEG 3 to CC7, CC9, CC11  EEG 4 to CC8, CC10, CC12<br>This event will not be coming from Murats PO and will need to be invoiced to another internal client. I will bring them into the email chain shortly.<br>Thank you,";
+    " <br>Notes:  From " +
+    destination +
+    " I will need this routed via the standard routing below." +
+    routing +
+    "  <br>This event will not be coming from Murats PO and will need to be invoiced to another internal client. I will bring them into the email chain shortly.<br>Thank you,";
 
   // The Switch is checked:
   if (theSwitch.is(":checked")) {
