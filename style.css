@@ -16,12 +16,16 @@ body {
     margin: 4% 20%;
     
   }
+
   h1 {
     color: wheat;
     text-align: center;
   }
   p {
     color: white;
+    
+  }
+  #subHeader{
     text-align: center;
   }
   .borderOutside{
@@ -38,6 +42,7 @@ table{
 }
 #theSwitchEmail{
 display: none;
+padding: 5%;
 }
 #captionMaxEmail{
     display: none;
