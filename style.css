@@ -9,26 +9,28 @@ body {
   .container {
     background-color: steelblue;
     border-radius: 10%;
-    padding: 5%;
+    padding: 5% 0%;
     display: flex;
     justify-content: center;
-    
     flex-direction: column;
-    padding: 5%;
-    margin: 3%;
+    margin: 4% 20%;
     
   }
   h1 {
     color: wheat;
+    text-align: center;
   }
   p {
     color: white;
+    text-align: center;
   }
   .borderOutside{
     border: 1px solid black;
   }
 table{
     border-collapse: collapse;
+    margin: auto;
+    justify-items: center;
 }
 .submitButton{
     background-color: rgba(215, 28, 66, 0.839);
@@ -39,4 +41,10 @@ display: none;
 }
 #captionMaxEmail{
     display: none;
+}
+#formSwitcher{
+  display: flex;
+  justify-content: space-evenly;
+  
+
 }
